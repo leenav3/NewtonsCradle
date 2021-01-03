@@ -21,7 +21,7 @@ class Roof{
     push();
     translate(pos.x,pos.y);
     stroke("black")
-    fill(rgb(51, 255, 204));
+    fill("black");
     rectMode(CENTER);
     rect(0,0,400,50);
 
