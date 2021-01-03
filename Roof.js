@@ -20,8 +20,8 @@ class Roof{
 
     push();
     translate(pos.x,pos.y);
-    stroke("black")
-    fill("black");
+    stroke("darkbrown")
+    fill("lightbrown");
     rectMode(CENTER);
     rect(0,0,400,50);
 
