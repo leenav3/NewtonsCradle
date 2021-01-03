@@ -6,8 +6,8 @@ class Chain{
         var options = {
             bodyA: body1,
             bodyB:body2,
-            stiffness: 0.04,
-            length: 10,
+          //  stiffness: 0.04,
+          //  length: 10,
             pointB:{x:this.offsetX,y:this.offsetY}
     
         }
@@ -18,16 +18,17 @@ class Chain{
     
     display(){
 
-        var pointX=this.chain.bodyA.position;
-        var pointY=this.chain.bodyB.position;
+        var pointX=this.chain.bodyA.position; //bob position 
+        var pointY=this.chain.bodyB.position; //roof position
         
         
-        strokeWeight(5);
-        fill("black");
-        var attactPointX= pointX.x+ this.offsetX;
-        var attachPointY=pointX.y+ this.offsetY;
+        strokeWeight(2)
+        //fill("black");
+        var attactPointX= pointY.x + this.offsetX;
+        //console.log(attactPointX)
+        var attachPointY=pointY.y+ this.offsetY;
 
-        line(attactPointX,attachPointY,pointY.x,pointY.y)
+        line(attactPointX,attachPointY,pointX.x,pointX.y,)
 
         
 

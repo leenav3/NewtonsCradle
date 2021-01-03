@@ -3,11 +3,10 @@ class Bob {
     constructor(x,y,r){
 
         var options={
-
-            density:1,
-            restitution:0.4,
-            isStatic:true,
-            frictionAir:1
+            isStatic:false,
+			restitution:1,
+			friction:0,
+			density:0.8
 
         }
         this.width=width;
@@ -16,7 +15,7 @@ class Bob {
         this.x=x;
         this.y=y;
 
-        this.bob=Bodies.circle(this.x,this.y,this.r,options);
+        this.bob=Bodies.circle(this.x,this.y,this.r/2,options);
         World.add(world,this.bob);
 
 
@@ -30,7 +29,7 @@ class Bob {
         push();
         translate(pos.x,pos.y)
         stroke("black");
-        fill(rgb(255, 255, 204));
+        fill("darkgrey");
         ellipse(0,0,this.r,this.r)
         
         
